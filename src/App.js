@@ -3,6 +3,9 @@ import { useState } from "react";
 import Searchbar from "./components/Searchbar";
 import ProfileCard from "./components/ProfileCard";
 import RepoCard from "./components/RepoCard";
+import logo from "./components/logo1.png"
+
+import "./App.css"
 
 import {
   getUser,
@@ -32,9 +35,11 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div  id="heropage" className="min-h-screen bg-gray-100">
 
       <div className="bg-gradient-to-r from-blue-700 to-purple-700 py-16">
+        <img style={{width:"200px",display: "block",
+    margin: "0 auto",}} src={logo}></img>
 
         <h1 className="text-center text-white text-5xl font-bold">
           DevScope
@@ -49,8 +54,8 @@ function App() {
         </div>
 
       </div>
-
-      <div className="max-w-6xl mx-auto p-6">
+<hero >
+      <div  className="max-w-6xl mx-auto p-6">
 
         {loading && (
           <h2 className="text-center text-2xl">
@@ -74,6 +79,7 @@ function App() {
         </div>
 
       </div>
+      </hero>
 
     </div>
   );
