@@ -39,7 +39,7 @@ function App() {
 
       <div className="bg-gradient-to-r from-blue-700 to-purple-700 py-16">
         <img style={{width:"200px",display: "block",
-    margin: "0 auto",}} src={logo}></img>
+    margin: "0 auto",}} src={logo}  alt="logo"></img>
 
         <h1 className="text-center text-white text-5xl font-bold">
           DevScope
