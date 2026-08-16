@@ -1,9 +1,151 @@
-#heropage{
-      background-image: url("./components/githu3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* ================= App.css ================= */
 
-    
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- Page Wrapper ---------- */
+#heropage.min-h-screen {
+  min-height: 100vh;
+  background: #0f1117;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.10), transparent 40%);
+  color: #e5e7eb;
+}
+
+/* ---------- Hero Header Section ---------- */
+.bg-gradient-to-r {
+  background: linear-gradient(120deg, #1e1b4b 0%, #4c1d95 50%, #6d28d9 100%);
+  padding: 4rem 1rem 5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(76, 29, 149, 0.35);
+}
+
+.bg-gradient-to-r::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 30%, rgba(255,255,255,0.08), transparent 35%),
+    radial-gradient(circle at 85% 70%, rgba(255,255,255,0.06), transparent 40%);
+  pointer-events: none;
+}
+
+.bg-gradient-to-r img {
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+  animation: floatLogo 4s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.text-center.text-white.text-5xl.font-bold {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-top: 1.25rem;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, #ffffff, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 30px rgba(139, 92, 246, 0.4);
+}
+
+.text-center.text-gray-200 {
+  text-align: center;
+  color: #d1d5db;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.mt-8.px-4 {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Hero Custom Tag Wrapper ---------- */
+hero {
+  display: block;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Content Container ---------- */
+.max-w-6xl.mx-auto.p-6 {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5rem;
+}
+
+/* ---------- Loading State ---------- */
+.text-center.text-2xl {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #a78bfa;
+  padding: 3rem 0;
+  animation: pulseFade 1.4s ease-in-out infinite;
+}
+
+@keyframes pulseFade {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ---------- Repo Grid ---------- */
+.grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6.mt-8 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6.mt-8 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6.mt-8 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Generic Card Polish (ProfileCard / RepoCard containers) ---------- */
+#heropage a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#heropage ::selection {
+  background: #7c3aed;
+  color: #fff;
 }
