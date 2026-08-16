@@ -16,7 +16,7 @@ body {
   background-image:
     radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.08), transparent 40%),
     radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.10), transparent 40%);
-  color: #e5e7eb;
+  color: #373839;
 }
 
 /* ---------- Hero Header Section ---------- */
@@ -66,7 +66,7 @@ body {
   text-shadow: 0 2px 30px rgba(139, 92, 246, 0.4);
 }
 
-.text-center.text-gray-200 {
+.text-center.text-gray-00 {
   text-align: center;
   color: #d1d5db;
   margin-top: 1rem;
@@ -147,5 +147,5 @@ hero {
 
 #heropage ::selection {
   background: #7c3aed;
-  color: #fff;
+  color: #232222;
 }
